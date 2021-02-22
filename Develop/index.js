@@ -1,9 +1,7 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-// TODO: Create an array of questions for user input
-// const questions = [];
+
 inquirer.prompt([
     {
         type: 'input',
@@ -45,7 +43,7 @@ inquirer.prompt([
     },
     {
         type: 'input',
-        name: 'githubUser',
+        name: 'username',
         message: 'What is your GitHub user name?',
     },
     {
@@ -53,7 +51,48 @@ inquirer.prompt([
         name: 'email',
         message: 'What is your email address?'
     }
-])
+]).then(data => {
+    const {
+    title,
+    description,
+    install,
+    usage,
+    contribute,
+    test,
+    license,
+    username,
+    email
+    } = data;
+    const generateREADME = 
+`
+# ${data.title}
+License Badge
+
+## Description
+
+${data.description}
+
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contribution](#contribution)
+* [Testing](#testing)
+* [Questions](#questions)
+
+## Installation
+
+## Usage
+
+## Contribution
+
+## Testing
+
+## Questions
+
+
+`
+})
 
 
 // TODO: Create a function to write README file
