@@ -56,7 +56,8 @@ const promptUser = () =>
 const generateREADME = (answers) =>
 `
 # ${answers.title}
-License Badge
+
+[![GitHub License](https://img.shields.io/badge/license-${answers.license}-green)](License.md)
 
 ## Description
 
@@ -74,7 +75,9 @@ ${answers.description}
 
 Run the following command to install dependencies:
 
+\`\`\`
 ${answers.install}
+\`\`\`
 
 ## Usage
 
@@ -88,14 +91,15 @@ ${answers.usage}
 
 For testing, run the following command:
 
+\`\`\`
 ${answers.test}
+\`\`\`
 
 ## Questions
 
 For any questions, please contact me by email or through my GitHub page
 * [${answers.email}](mailto:${answers.email})
 * [${answers.username}](https://github.com/${answers.username})
-
 `;
 
 const init = () => {
@@ -111,13 +115,3 @@ const init = () => {
 };
 
 init();
-
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();
