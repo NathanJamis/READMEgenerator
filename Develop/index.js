@@ -95,6 +95,10 @@ For testing, run the following command:
 ${answers.test}
 \`\`\`
 
+## License
+
+${answers.license} 
+
 ## Questions
 
 For any questions, please contact me by email or through my GitHub page
