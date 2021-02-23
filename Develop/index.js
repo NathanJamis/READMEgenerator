@@ -1,8 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
 
-inquirer.prompt([
+const promptUser = () => 
+    inquirer.prompt([
     {
         type: 'input',
         name: 'title',
@@ -51,19 +51,9 @@ inquirer.prompt([
         name: 'email',
         message: 'What is your email address?'
     }
-]).then(data => {
-    const {
-    title,
-    description,
-    install,
-    usage,
-    contribute,
-    test,
-    license,
-    username,
-    email
-    } = data;
-    const generateREADME = 
+]);
+
+const generateREADME = (answers) =>
 `
 # ${data.title}
 License Badge
@@ -91,15 +81,28 @@ ${data.description}
 ## Questions
 
 
-`
-})
+`;
+
+const init = () => {
+    promptUser().then((answers) => {
+        try {
+            const readme = generateREADME(answers);
+            fs.writeFileSync('README.md', readme);
+            console.log('Succesfully wrote README.md file');
+        } catch (error) {
+            console.log(error);
+        }
+    });
+};
+
+init();
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+// function init() {}
 
 // Function call to initialize app
-init();
+// init();
