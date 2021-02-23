@@ -55,12 +55,12 @@ const promptUser = () =>
 
 const generateREADME = (answers) =>
 `
-# ${data.title}
+# ${answers.title}
 License Badge
 
 ## Description
 
-${data.description}
+${answers.description}
 
 ## Table of Contents
 
@@ -72,14 +72,29 @@ ${data.description}
 
 ## Installation
 
+Run the following command to install dependencies:
+
+${answers.install}
+
 ## Usage
+
+${answers.usage}
 
 ## Contribution
 
+${answers.usage}
+
 ## Testing
+
+For testing, run the following command:
+
+${answers.test}
 
 ## Questions
 
+For any questions, please contact me by email or through my GitHub page
+* [${answers.email}](mailto:${answers.email})
+* [${answers.username}](https://github.com/${answers.username})
 
 `;
 
