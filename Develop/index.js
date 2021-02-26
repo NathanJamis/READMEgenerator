@@ -85,7 +85,7 @@ ${answers.usage}
 
 ## Contribution
 
-${answers.usage}
+${answers.contribute}
 
 ## Testing
 
