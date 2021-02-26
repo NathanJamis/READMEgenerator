@@ -7,6 +7,8 @@
 
 An application that will generate a README.md file with given user input
 
+**This readme was made by using the generator!**
+
 ## Table of Contents
 
 * [Installation](#installation)
