@@ -48,3 +48,7 @@ MIT
 For any questions, please contact me by email or through my GitHub page
 * [jamis.walsh@gmail.com](mailto:jamis.walsh@gmail.com)
 * [NathanJamis](https://github.com/NathanJamis)
+
+## Walkthrough
+
+[Link to walkthrough video](https://www.youtube.com/watch?v=ENTa0OBQfv8&feature=youtu.be&ab_channel=NathanWalsh)
